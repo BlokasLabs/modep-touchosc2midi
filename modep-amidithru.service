@@ -1,0 +1,13 @@
+[Unit]
+Description=amidithru service for touchosc2midi
+After=sound.target
+Wants=sound.target
+
+[Service]
+ExecStart=/usr/bin/amidithru touchosc
+User=modep
+Group=modep
+
+[Install]
+WantedBy=multi-user.target
+

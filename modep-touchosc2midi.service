@@ -1,0 +1,14 @@
+[Unit]
+Description=TouchOsc2Midi service
+After=network-online.target modep-amidithru.service
+Wants=network-online.target
+BindsTo=modep-amidithru.service network-online.target
+
+[Service]
+ExecStart=/bin/bash /usr/modep/scripts/start_touchosc2midi.sh
+User=modep
+Group=modep
+
+[Install]
+WantedBy=multi-user.target
+
