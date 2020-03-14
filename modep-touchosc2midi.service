@@ -3,6 +3,7 @@ Description=TouchOsc2Midi service
 After=network-online.target modep-amidithru.service
 Wants=network-online.target
 BindsTo=modep-amidithru.service network-online.target jack.service
+Conflicts=touchosc2midi.service
 
 [Service]
 ExecStart=/bin/bash /usr/modep/scripts/start_touchosc2midi.sh
