@@ -7,6 +7,8 @@ Wants=sound.target
 ExecStart=/usr/bin/amidithru touchosc
 User=modep
 Group=modep
+Restart=always
+RestartSec=2
 
 [Install]
 WantedBy=multi-user.target

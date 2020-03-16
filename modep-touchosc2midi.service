@@ -9,6 +9,8 @@ Conflicts=touchosc2midi.service
 ExecStart=/bin/bash /usr/modep/scripts/start_touchosc2midi.sh
 User=modep
 Group=modep
+Restart=always
+RestartSec=2
 
 [Install]
 WantedBy=multi-user.target
